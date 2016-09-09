@@ -38,12 +38,10 @@ class Swipeout extends React.Component {
   }
 
   componentDidMount() {
-    const { left, right } = this.props;
     const width = this.refs.content.offsetWidth;
 
-    this.contentWidth = width;
-    this.btnsLeftWidth = left ? (width / 5) * left.length : 0;
-    this.btnsRightWidth = right ? (width / 5) * right.length : 0;
+    this.btnsLeftWidth = width / 2.5;
+    this.btnsRightWidth = width / 2.5;
   }
 
   onPanStart(e) {
@@ -66,10 +64,21 @@ class Swipeout extends React.Component {
       posX = posX + this.btnsLeftWidth;
     }
 
-    if (posX < 0 && this.props.right) {
-      this._setStyle(Math.min(posX, 0));
-    } else if (posX > 0 && this.props.left) {
-      this._setStyle(Math.max(posX, 0));
+    let enableSwiping;
+
+    if(posX > 0 && posX < 100){
+      enableSwiping = true;
+    } else if (posX < 0 && posX < -100){
+      enableSwiping = true;
+    } else {
+      enableSwiping = false;
+    }
+    if(enableSwiping) {
+      if (posX < 0 && this.props.right) {
+        this._setStyle(Math.min(posX, 0));
+      } else if (posX > 0 && this.props.left) {
+        this._setStyle(Math.max(posX, 0));
+      }
     }
   }
 
