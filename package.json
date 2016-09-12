@@ -1,6 +1,6 @@
 {
   "name": "rc-swipeout-limited",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "swipe out ui component for react(web and react-native) with static value of button width and disable switching when any button is visible",
   "keywords": [
     "react",
@@ -20,7 +20,7 @@
   },
   "files": [
     "lib",
-    "assets/*.css"
+    "assets"
   ],
   "licenses": "MIT",
   "main": "./lib/index.web",
