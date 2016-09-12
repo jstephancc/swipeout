@@ -1,7 +1,7 @@
 {
-  "name": "rc-swipeout",
+  "name": "rc-swipeout-forked",
   "version": "1.1.5",
-  "description": "swipe out ui component for react(web and react-native)",
+  "description": "swipe out ui component for react(web and react-native) with static value of button width and disable switching when any button is visible",
   "keywords": [
     "react",
     "react-component",
