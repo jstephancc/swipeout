@@ -77,7 +77,7 @@ class Swipeout extends React.Component {
     } else {
       enableSwiping = false;
     }
-    if(enableSwiping) {
+    if (enableSwiping) {
       if (posX < 0 && this.props.right) {
         this._setStyle(Math.min(posX, 0));
       } else if (posX > 0 && this.props.left) {

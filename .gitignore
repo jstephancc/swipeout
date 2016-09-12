@@ -18,8 +18,7 @@ Thumbs.db
 *.pyo
 node_modules
 dist
-build
-lib
+buildnpm
 coverage
 ios
 android
